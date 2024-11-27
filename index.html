@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guía para Avanzar sin Parálisis por Análisis</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            background-color: #f9f9f9;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #F2F8FD;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        h1, h2 {
+            color: #00344B;
+        }
+        textarea, button {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        .result {
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #fce4ec;
+            border: 1px solid #f8bbd0;
+            border-radius: 5px;
+            color: #ad1457;
+            font-weight: bold;
+        }
+        .cta-container {
+            text-align: center;
+            margin-top: 30px;
+        }
+        .cta-container p {
+            color: #00344B;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .cta-container a {
+            display: inline-block;
+            background-color: #00DC42;
+            color: #ffffff;
+            text-decoration: none;
+            padding: 15px 25px;
+            border-radius: 5px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .cta-container a:hover {
+            background-color: #00c03a;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Guía para Avanzar sin Parálisis por Análisis</h1>
+        <p>Introduce tu dilema o proyecto y recibe una estrategia práctica para avanzar hoy mismo.</p>
+
+        <form id="analysis-paralysis-form">
+            <label for="situation">¿Cuál es la decisión o proyecto que te tiene bloqueado?</label>
+            <textarea id="situation" placeholder="Ejemplo: No sé si debo lanzar mi curso online o mejorar mis redes sociales primero"></textarea>
+
+            <button type="button" onclick="provideSolution()">Encontrar Solución</button>
+        </form>
+
+        <div id="result" class="result" style="display: none;"></div>
+
+        <div class="cta-container">
+            <p>Únete al “Desafío Libertad 72h” y descubre como crear un Ingreso Extra Online sin perder tiempo.</p>
+            <a href="https://klicana.work/p6Aik4" target="_blank">SÍ!, UNIRME AL DESAFÍO!</a>
+        </div>
+    </div>
+
+    <script>
+        function provideSolution() {
+            const situation = document.getElementById("situation").value.trim();
+
+            if (!situation) {
+                document.getElementById("result").style.display = "block";
+                document.getElementById("result").textContent = "Por favor, describe tu situación para generar una solución.";
+                return;
+            }
+
+            const advice = `
+                <strong>Consejo para avanzar:</strong><br>
+                - Divide tu dilema en dos opciones principales y elige avanzar con la más sencilla.<br>
+                - Recuerda: "Hecho es mejor que perfecto". Actúa hoy en un pequeño paso que te acerque al resultado deseado.<br>
+                <strong>Recomendación:</strong> Busca herramientas que automaticen procesos o te ahorren tiempo en esta decisión.
+            `;
+
+            document.getElementById("result").style.display = "block";
+            document.getElementById("result").innerHTML = advice;
+        }
+    </script>
+</body>
+</html>
